@@ -14,7 +14,7 @@ export default function CountryLookup(){
             console.log(countGot);
         };
         getCountry()
-    },[])
+    } , [])
     return(
         <h1>{country}</h1>
     )
