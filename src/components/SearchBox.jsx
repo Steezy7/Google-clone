@@ -22,7 +22,7 @@ export default function SearchBox(){
     return(
         <form onSubmit={handleSubmit} className="flex border border-gray-200 
         rounded-full shadow-lg px-6 py-3 ml-10 mr-5 flex-grow max-w-3xl
-        items-center">
+        items-center max-sm:ml-0 max-sm:mr-0">
             <input type="text" className="w-full focus:outline-none" 
             value={term}
             onChange={(e)=>setTerm(e.target.value)}

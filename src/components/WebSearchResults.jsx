@@ -10,12 +10,12 @@ export default function WebSearchResults({results}){
             {results.items?.map((result)=>(
                 <div className="mb-8 max-w-xl" key={result.link}>
                     <div className="group flex flex-col">
-                        <Link href={result.link}>
+                        <Link href={result.link} className="truncate">
                             {result.formattedUrl}
                         </Link>
 
                         <Link href={result.link} className="group-hover:underline decoration-blue-800 text-xl truncate font-medium text-blue-800">
-                            {result.link}
+                            {result.formattedUrl}
                         </Link>
                     </div>
                     <p className="text-gray-600">{Parser(result.htmlSnippet)}</p>
