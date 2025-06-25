@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Link from "next/link";
 import PaginationButtons from "./PaginationsButtons";
 
@@ -24,7 +25,9 @@ export default function ImageSearchResults({results}){
                 ))}
             </div>
             <div className="ml-16">
-                <PaginationButtons/>
+                <Suspense fallback={<div>Loading pagination...</div>}>
+                    <PaginationButtons/>
+                </Suspense>
             </div>
         </div>
     )
